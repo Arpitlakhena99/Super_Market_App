@@ -1,0 +1,5 @@
+com\example\supermarket\controller\OrderControllerTest.class
+com\example\supermarket\controller\ProductControllerTest.class
+com\example\supermarket\exception\GlobalExceptionHandlerTest.class
+com\example\supermarket\service\OrderServiceImplTest.class
+com\example\supermarket\service\ProductServiceImplTest.class
