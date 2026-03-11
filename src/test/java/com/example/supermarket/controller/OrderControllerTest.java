@@ -1,4 +1,5 @@
 package com.example.supermarket.controller;
+import org.springframework.security.test.context.support.WithMockUser;
 
 import com.example.supermarket.dto.OrderDto;
 import com.example.supermarket.service.OrderService;
@@ -35,6 +36,7 @@ class OrderControllerTest {
     }
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     void createOrder_shouldReturnCreated() throws Exception {
         OrderDto out = OrderDto.builder().id(1L).customerId(1L).build();
         when(orderService.create(any())).thenReturn(out);

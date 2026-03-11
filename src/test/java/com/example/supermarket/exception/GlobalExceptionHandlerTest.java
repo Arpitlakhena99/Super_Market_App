@@ -1,4 +1,6 @@
 package com.example.supermarket.exception;
+import org.springframework.security.test.context.support.WithMockUser;
+
 
 import com.example.supermarket.controller.ProductController;
 import com.example.supermarket.service.ProductService;
@@ -30,6 +32,7 @@ class GlobalExceptionHandlerTest {
     private ProductService productService;
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     void whenInvalidInput_thenReturnsBadRequest() throws Exception {
         // Simulate validation failure by throwing IllegalArgumentException in service
         when(productService.create(any())).thenThrow(new IllegalArgumentException("Invalid input"));

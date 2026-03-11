@@ -29,3 +29,8 @@ management:
     web:
       exposure:
         include: health,info
+
+# JWT Configuration
+jwt:
+  secret: your-secret-key-change-this-in-production-make-it-very-long-and-secure
+  expiration: 86400000
