@@ -16,7 +16,6 @@ import java.math.BigDecimal;
  */
 @Component
 public class DataInitializer implements CommandLineRunner {
-    log.info("Running DataInitializer to seed initial data...");
 
     private final CategoryRepository categoryRepository;
     private final ProductRepository productRepository;
